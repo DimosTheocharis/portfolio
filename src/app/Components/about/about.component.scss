@@ -1,0 +1,103 @@
+@use '../../../styles.scss' as v;
+
+.aboutText {
+    font-style: italic;
+    font-family: roboto;
+}
+
+.container-fluid {
+    min-height: 400px;
+    background-color: v.$primaryColor;
+    padding: 30px;
+}
+
+.container-fluid > .row {
+    height: 100%;
+}
+
+.contentColumn {
+    height: 90%;
+    padding: 10px;
+}
+
+.contentRow {
+    height: 80%;
+    padding: 0px 10px;
+}
+
+.identityRow {
+    height: 10%;
+}
+
+.infoRow {
+    padding: 5px 0px 0px 20px;
+}
+
+.infoRow > .label, .infoRow > .value {
+    padding: 5px 0px;
+}
+
+.infoRow > .label > p {
+    font-weight: bold;
+    margin: 0px;
+}
+
+.infoRow > .value > p {
+    margin: 0px;
+}
+
+.informationRow {
+    height: 75%;
+}
+
+.link {
+    max-height: 50px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$secondaryColor;
+
+    .fa {
+        color: v.$accentColor;
+    }
+}
+
+.link:hover {
+    background-color: v.$accentColor;
+
+    .fa {
+        color: v.$secondaryColor;
+    }
+}
+
+.linkColumn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linksRow {
+    height: 15%;
+}
+
+p {
+    color: v.$accentColor2;
+}
+
+.photoSection {
+    background-color: v.$secondaryColor;
+}
+
+.titleRow {
+    height: 20%;
+    text-align: center;
+}
+
+.titleRow h3 {
+    color: v.$accentColor3;
+}
+

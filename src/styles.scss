@@ -1,5 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color: rgb(0,0,0);
-$secondary-color: rgb(46,46,46);
-$accent-color: rgb(170, 40, 250);
+* {
+    transition: all 0.3s;
+}
+
+$primaryColor: rgb(0,0,0);
+$secondaryColor: rgb(46,46,46);
+$accentColor: rgb(170, 40, 250);
+$accentColor2: rgb(216,216,216);
+$accentColor3: rgb(250, 170, 40);
+
+@font-face {
+    font-family: roboto;
+    src: url("/src/assets/fonts/Roboto-Regular.ttf");
+}
+
+.roboto {
+    font-family: roboto;
+}

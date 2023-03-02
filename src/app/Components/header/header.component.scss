@@ -1,3 +1,20 @@
 @use '../../../styles.scss' as v;
 
+.navbar {
+    background-color: v.$primaryColor;
+}
 
+.navbar-brand {
+    color: v.$accentColor3;
+}
+
+.nav-link {
+    color: v.$accentColor;
+    font-family: roboto;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    scale: 1.1;
+}

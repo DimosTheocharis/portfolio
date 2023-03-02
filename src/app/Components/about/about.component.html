@@ -1,0 +1,91 @@
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 photoSection">
+            photo section
+        </div>
+        <div class="col-md-8 container">
+            <div class="row identityRow">
+                <div class="col-md-12 test">
+                    Hi, my name is Dimosthenis Theocharis
+                </div>
+            </div>
+
+            <div class="row informationRow">
+                <div class="col-md-6 container aboutSection">
+                    <div class="row titleRow">
+                        <div class="col-md">
+                            <h3>ABOUT</h3>
+                        </div>
+                    </div>
+                    <div class="row contentRow">
+                        <div class="col-md contentColumn">
+                            <p class="aboutText">
+                                "I've recently started my journey as a software engineer and have been experimented
+                                with projects involving web technologies. I consider myself as a person who loves to find
+                                solutions to problems and learn new things."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row titleRow">
+                        <div class="col-md">
+                            <h3>BASIC INFORMATION</h3>
+                        </div>
+                    </div>
+                    <div class="row contentRow">
+                        <div class="col-md contentColumn container">
+                            <div class="row infoRow">
+                                <div class="col-md-6 label">
+                                    <p>DATE OF BIRTH: </p>
+                                </div>
+                                <div class="col-md-6 value">
+                                    <p>13/04/2003</p>
+                                </div>
+                            </div>
+                            <div class="row infoRow">
+                                <div class="col-md-6 label">
+                                    <p>EMAIL: </p>
+                                </div>
+                                <div class="col-md-6 value">
+                                    <p>dimostheocharis10@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row infoRow">
+                                <div class="col-md-6 label">
+                                    <p>PHONE: </p>
+                                </div>
+                                <div class="col-md-6 value">
+                                    <p>6955215169</p>
+                                </div>
+                            </div>
+                            <div class="row infoRow">
+                                <div class="col-md-6 label">
+                                    <p>LANGUAGE: </p>
+                                </div>
+                                <div class="col-md-6 value">
+                                    <p>Greek, English</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row linksRow">
+                <div *ngFor="let link of links" class="col-md-3 linkColumn">
+                    <div class="link">
+                        <a class="btn btn-default btn-round btn-lg btn-icon"
+                           [href]="link.href"
+                           target="_blank"
+                           rel="tooltip"
+                           [title]="link.message"
+                        >
+                            <i [class]="link.icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
