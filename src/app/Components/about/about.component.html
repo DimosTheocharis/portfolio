@@ -1,12 +1,18 @@
 <section class="container-fluid">
     <div class="row">
         <div class="col-md-4 photoSection">
-            photo section
+            <span class="photoInner">
+                <img src="../../../assets/images/photoProfile.jpg" href="My profile photo" class="photoImg">
+            </span>
         </div>
         <div class="col-md-8 container">
-            <div class="row identityRow">
-                <div class="col-md-12 test">
-                    Hi, my name is Dimosthenis Theocharis
+            <div class="identityRow">
+                <div class="identityWrapper">
+                    <div class="staticText">Hi, I am </div>
+                    <ul class="dynamicTexts">
+                        <li><span>Dimos Theocharis</span></li>
+                        <li><span>Software Engineer</span></li>
+                    </ul>
                 </div>
             </div>
 
@@ -35,36 +41,12 @@
                     </div>
                     <div class="row contentRow">
                         <div class="col-md contentColumn container">
-                            <div class="row infoRow">
+                            <div *ngFor="let info of basicInfo" class="row infoRow">
                                 <div class="col-md-6 label">
-                                    <p>DATE OF BIRTH: </p>
+                                    <p>{{info.label}}</p>
                                 </div>
                                 <div class="col-md-6 value">
-                                    <p>13/04/2003</p>
-                                </div>
-                            </div>
-                            <div class="row infoRow">
-                                <div class="col-md-6 label">
-                                    <p>EMAIL: </p>
-                                </div>
-                                <div class="col-md-6 value">
-                                    <p>dimostheocharis10@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="row infoRow">
-                                <div class="col-md-6 label">
-                                    <p>PHONE: </p>
-                                </div>
-                                <div class="col-md-6 value">
-                                    <p>6955215169</p>
-                                </div>
-                            </div>
-                            <div class="row infoRow">
-                                <div class="col-md-6 label">
-                                    <p>LANGUAGE: </p>
-                                </div>
-                                <div class="col-md-6 value">
-                                    <p>Greek, English</p>
+                                    <p>{{info.value}}</p>
                                 </div>
                             </div>
                         </div>
@@ -73,16 +55,18 @@
             </div>
 
             <div class="row linksRow">
-                <div *ngFor="let link of links" class="col-md-3 linkColumn">
-                    <div class="link">
-                        <a class="btn btn-default btn-round btn-lg btn-icon"
-                           [href]="link.href"
-                           target="_blank"
-                           rel="tooltip"
-                           [title]="link.message"
-                        >
-                            <i [class]="link.icon"></i>
-                        </a>
+                <div class="linksInnerRow">
+                    <div *ngFor="let link of links" class="col-md-3 linkColumn">
+                        <div class="link">
+                            <a class="btn btn-default btn-round btn-lg btn-icon"
+                               [href]="link.href"
+                               target="_blank"
+                               rel="tooltip"
+                               [title]="link.message"
+                            >
+                                <i [class]="link.icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

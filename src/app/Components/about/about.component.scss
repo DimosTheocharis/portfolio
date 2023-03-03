@@ -29,6 +29,49 @@
     height: 10%;
 }
 
+.identityWrapper {
+    display: inline-flex;
+    position: relative;
+}
+
+.identityWrapper .staticText {
+    font-size: 20px;
+    font-weight: bold;
+    color: v.$accentColor2;
+}
+
+.identityWrapper .dynamicTexts {
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.identityWrapper .dynamicTexts li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: v.$accentColor;
+    position: relative;
+    animation: slider 6s steps(2) infinite;
+
+    span {
+        position: relative;
+    }
+
+    span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 110%;
+        border-left: 2px solid v.$accentColor;
+        background-color: v.$primaryColor;
+        left: 0px;
+        animation: typing 3s steps(17) infinite;
+        z-index: 1;
+    }
+} 
+
 .infoRow {
     padding: 5px 0px 0px 20px;
 }
@@ -48,7 +91,9 @@
 
 .informationRow {
     height: 75%;
-}
+
+}  
+
 
 .link {
     max-height: 50px;
@@ -80,16 +125,64 @@
     align-items: center;
 }
 
+.linksInnerRow {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
 .linksRow {
     height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 p {
     color: v.$accentColor2;
 }
 
+.photoInner {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .photoImg {
+        width: 80%;
+        height: 80%;
+    }
+}
+
 .photoSection {
-    background-color: v.$secondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoInner::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 35%;
+    height: 35%;
+    border-top: 10px solid v.$accentColor;
+    border-left: 10px solid v.$accentColor
+}
+
+.photoInner::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 35%;
+    height: 35%;
+    border-right: 10px solid v.$accentColor;
+    border-bottom: 10px solid v.$accentColor;
 }
 
 .titleRow {
@@ -99,5 +192,18 @@ p {
 
 .titleRow h3 {
     color: v.$accentColor3;
+    font-family: roboto;
 }
 
+@keyframes slider {
+    100% {
+        top: -30px;
+    }
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0px -35px 0px 35px;
+    }
+}
