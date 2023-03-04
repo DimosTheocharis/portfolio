@@ -207,3 +207,14 @@ p {
         margin: 0px -35px 0px 35px;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .linksInnerRow {
+        width: 80%;
+    }
+
+    .linksRow {
+        margin-top: 50px;
+    }
+}
