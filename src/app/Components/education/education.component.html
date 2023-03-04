@@ -1,0 +1,13 @@
+<div class="timeline">
+
+    <div *ngFor="let item of education" [class]="item.class">
+        <div class="circle"></div>
+        <div class="content">
+            <h2>{{item.title}}</h2>
+            <small>{{item.attendancePeriod}}</small>
+            <p>{{item.text}}</p>
+            <div [class]="item.arrowClass"></div>
+        </div>
+    </div>
+    
+</div>

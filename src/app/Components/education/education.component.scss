@@ -1,0 +1,177 @@
+@use '../../../styles.scss' as v;
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: v.$accentColor;
+    position: absolute;
+    top: 32px;
+    right: -20px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: v.$secondaryColor;
+    border-radius: 6px;
+    position: relative;
+
+    h2 {
+        font-weight: bold;
+        color: v.$primaryColor;
+    }
+
+    p {
+        font-size: 15px;
+        color: v.$accentColor2;
+    }
+
+    small {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: v.$accentColor3;
+    }
+}
+
+.leftWrapper {
+    left: 0%;
+
+    .rightArrow {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 28px;
+        right: -13px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid v.$secondaryColor;
+    }
+}
+
+.rightWrapper {
+    left: 50%;
+
+    .circle {
+        left: -20px;
+    }
+
+    .leftArrow {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 28px;
+        left: -13px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid v.$secondaryColor;
+    }
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    width: 6px;
+    background: v.$accentColor2;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -3px;
+    z-index: -1;
+    animation: lineExpand 6s linear forwards;
+}
+
+.wrapper {
+    width: 50%;
+    position: relative;
+    padding: 10px 50px;
+    animation: slideDown 1s linear forwards;
+    opacity: 0;
+}
+
+.wrapper:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wrapper:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.wrapper:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes lineExpand {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .content {
+        p {
+            font-size: 13px;
+        }
+
+        small {
+            margin-bottom: 10px;
+        }
+    }
+
+    .leftWrapper {
+
+        .circle {
+            left: 10px;
+        }
+
+        .rightArrow {
+            left: -13px;
+            border-left: 0px;
+            border-right: 15px solid v.$secondaryColor;
+        }
+    }
+
+    .rightWrapper {
+        left: 0px;
+
+        .circle {
+            left: 10px;
+        }
+    }
+
+    .timeline {
+        margin: 50px auto;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+}

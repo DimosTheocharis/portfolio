@@ -5,12 +5,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { AboutComponent } from './Components/about/about.component';
+import { EducationComponent } from './Components/education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AboutComponent
+    AboutComponent,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
