@@ -1,0 +1,15 @@
+<div class="timeline">
+
+    <div *ngFor="let item of items" [class]="item.class">
+        <img *ngIf="item.imagePath" class="circle" [src]="item.imagePath" alt="A photo">
+        <div *ngIf="!item.imagePath" class="circle"></div>
+        <div class="content">
+            <h2>{{item.title}}</h2>
+            <small *ngIf="item.attendancePeriod">{{item.attendancePeriod}}</small>
+            <small *ngIf="item.workPeriod">{{item.workPeriod}}</small>
+            <p>{{item.text}}</p>
+            <div [class]="item.arrowClass"></div>
+        </div>
+    </div>
+    
+</div>

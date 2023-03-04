@@ -1,0 +1,32 @@
+@use "../../../styles.scss" as v;
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    color: v.$accentColor;
+    padding: 0px 10px;
+}
+
+.horizontalLine {
+    flex: 1;
+    height: 16px;
+    border-radius: 10px;
+    background-color: v.$secondaryColor;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+
+
