@@ -22,3 +22,26 @@ body {
 .roboto {
     font-family: roboto;
 }
+
+.link {
+    max-height: 50px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondaryColor;
+
+    .fa {
+        color: $accentColor;
+    }
+}
+
+.link:hover {
+    background-color: $accentColor;
+
+    .fa {
+        color: $secondaryColor;
+    }
+}

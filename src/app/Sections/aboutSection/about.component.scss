@@ -91,32 +91,7 @@
 
 .informationRow {
     height: 75%;
-
-}  
-
-
-.link {
-    max-height: 50px;
-    height: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: v.$secondaryColor;
-
-    .fa {
-        color: v.$accentColor;
-    }
-}
-
-.link:hover {
-    background-color: v.$accentColor;
-
-    .fa {
-        color: v.$secondaryColor;
-    }
-}
+} 
 
 .linkColumn {
     height: 100%;

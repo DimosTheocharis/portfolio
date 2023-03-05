@@ -9,6 +9,8 @@ import { EducationComponent } from './Sections/educationSection/education.compon
 import { SectionHeaderComponent } from './Components/section-header/section-header.component';
 import { ExperienceComponent } from './Sections/experienceSection/experience.component';
 import { TimelineComponent } from './Components/timeline/timeline.component';
+import { ProjectsComponent } from './Sections/projectsSection/projects.component';
+import { ProjectComponent } from './Components/project/project.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TimelineComponent } from './Components/timeline/timeline.component';
     EducationComponent,
     SectionHeaderComponent,
     ExperienceComponent,
-    TimelineComponent
+    TimelineComponent,
+    ProjectsComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

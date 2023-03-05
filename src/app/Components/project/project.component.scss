@@ -1,0 +1,129 @@
+@use "../../../styles.scss" as v;
+
+.columnTitle {
+    color: v.$accentColor2;
+    padding: 5px 15px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: v.$secondaryColor;
+    border-radius: 10px;
+}
+
+.firstRow {
+    height: 70%;
+}
+
+.imageColumn {
+    padding: 0px;
+    max-height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+.mainColumn {
+
+    .descriptionRow {
+        height: 80%;
+
+        .description {
+            color: v.$accentColor2;
+            word-spacing: 0.175rem;
+            line-height: 1.5rem;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    .identityRow {
+        height: 20%;
+        position: relative;
+
+        h2 {
+            text-align: center;
+            font-style: roboto;
+            color: v.$accentColor2;
+            padding-top: 10px;
+        }
+
+        .idCircle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: v.$accentColor3;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: v.$primaryColor;
+            font-weight: bold;
+        }
+
+        small {
+            color: v.$accentColor3;
+        }
+    }
+}
+
+.operationButtonsColumn {
+
+    .operationButtons {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+
+        .link {
+            background-color: v.$accentColor;
+
+            .fa {
+                color: v.$primaryColor;
+            }
+        }
+
+        .link:hover {
+
+            .fa {
+                color: v.$secondaryColor;
+            }
+        }
+    }
+}
+
+.secondRow {
+    height: 30%;
+}
+
+.technologiesColumn {
+
+    .technologies {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 30px;
+
+        .technology {
+            height: 30px;
+            padding: 5px 15px;
+            background-color: v.$accentColor;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

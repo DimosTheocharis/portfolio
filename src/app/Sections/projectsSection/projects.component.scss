@@ -1,0 +1,31 @@
+.carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    margin: 0px;
+    height: 100%;
+    column-gap: 0px;
+    gap: 0px;
+}
+
+.carousel {
+    width: 75vw;
+    margin: auto;
+    height: 600px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        min-height: 1400px;
+    }
+}

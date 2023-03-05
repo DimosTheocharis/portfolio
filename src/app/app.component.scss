@@ -1,0 +1,28 @@
+@use "../styles.scss" as v;
+
+.homeArrow {
+    color: v.$accentColor;
+}
+
+.homeButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid v.$accentColor;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    background-color: v.$secondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.homeButton:hover {
+    background-color: v.$accentColor;
+
+    .homeArrow {
+        color: v.$secondaryColor;
+    }
+}

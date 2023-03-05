@@ -26,7 +26,7 @@ export class BasicInfoService {
 
   constructor() { }
 
-  public getBasicInfo() {
+  public getBasicInfo(): BasicInfoModel[] {
     return this.basicInfoData;
   }
 }

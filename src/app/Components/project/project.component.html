@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row firstRow">
+        <div class="col-md-8 mainColumn">
+            <div class="row identityRow">
+                <div class="idCircle">{{project.id}}</div>
+                <h2>{{project.title}}</h2>
+                <small>{{project.developmentPeriod}}</small>
+            </div>
+            <div class="row descriptionRow">
+                <p class="description">{{project.description}}</p>
+            </div>
+        </div>
+        <div class="col-md-4 imageColumn">
+            <img [src]="project.imagePath" [alt]="project.title">
+        </div>
+    </div>
+    <div class="row secondRow">
+        <div class="col-md-7 technologiesColumn">
+            <h4 class="columnTitle">Technologies</h4>
+            <div class="technologies">
+                <div *ngFor="let technology of project.technologies" class="technology">{{technology}}</div>
+            </div>
+        </div>
+        <div class="col-md-5 operationButtonsColumn">
+            <h4 class="columnTitle">Operation Buttons</h4>
+            <div class="operationButtons">
+                <div *ngFor="let operation of project.operations" class="link">
+                    <a class="btn btn-default btn-round btn-lg btn-icon"
+                       [href]="operation.href"
+                       target="_blank"
+                       rel="tooltip"
+                       [title]="operation.message"
+                    >
+                        <i [class]="operation.icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
