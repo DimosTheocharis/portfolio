@@ -1,0 +1,12 @@
+@use "../../../styles.scss" as v;
+
+.technology {
+    height: 30px;
+    max-width: 140px;
+    padding: 5px 15px;
+    background-color: v.$accentColor;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

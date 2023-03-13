@@ -7,20 +7,8 @@
     <div class="collapse navbar-collapse" id="navigationBar">
       <div class="me-auto"></div>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#HomeSection">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#EducationSection">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#ExperienceSection">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#ProjectsSection">Projects</a>
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a class="nav-link" [href]="item.href">{{item.title}}</a>
         </li>
       </ul>
     </div>

@@ -18,7 +18,7 @@
         <div class="col-md-7 technologiesColumn">
             <h4 class="columnTitle">Technologies</h4>
             <div class="technologies">
-                <div *ngFor="let technology of project.technologies" class="technology">{{technology}}</div>
+                <app-technology *ngFor="let technology of project.technologies" [name]="technology"></app-technology>
             </div>
         </div>
         <div class="col-md-5 operationButtonsColumn">

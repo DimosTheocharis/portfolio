@@ -1,0 +1,22 @@
+@use "../../../styles.scss" as v;
+
+.explanatoryText {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+
+    p {
+        color: v.$accentColor2;
+        font-style: italic; 
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
+    margin: auto;
+}
+

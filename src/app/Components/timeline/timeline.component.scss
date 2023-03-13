@@ -69,11 +69,11 @@
 
 .timeline {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: auto;
     position: relative;
 }
 
-.timeline::after {
+.timelineAnimation::after {
     content: '';
     width: 6px;
     background: v.$accentColor2;
@@ -85,7 +85,11 @@
     animation: lineExpand 6s linear forwards;
 }
 
-.wrapper {
+.unvisible {
+    display: none;
+}
+
+.wrapperAnimation {
     width: 50%;
     position: relative;
     padding: 10px 50px;
@@ -93,15 +97,15 @@
     opacity: 0;
 }
 
-.wrapper:nth-child(1) {
+.wrapperAnimation:nth-child(1) {
     animation-delay: 0s;
 }
 
-.wrapper:nth-child(2) {
+.wrapperAnimation:nth-child(2) {
     animation-delay: 2s;
 }
 
-.wrapper:nth-child(3) {
+.wrapperAnimation:nth-child(3) {
     animation-delay: 4s;
 }
 
