@@ -152,7 +152,13 @@ export class ProjectsService {
                     around with 4 unique drawing features, and save them to your files so as never to lose them...",
       imagePath: "../../../assets/images/Drawnar.io.png",
       technologies: ["Python", "Json"],
-      operations: [],
+      operations: [
+        {
+          icon: "fa fa-code",
+          href: "https://github.com/DimosTheocharis/Drawnar.io",
+          message: "Code"
+        }
+      ],
       class: "carousel-item"
     },
     {
@@ -183,7 +189,13 @@ export class ProjectsService {
                     than yours, and a more life.",
       imagePath: "../../../assets/images/SpaceInvaders.jpg",
       technologies: ["Python"],
-      operations: [],
+      operations: [
+        {
+          icon: "fa fa-code",
+          href: "https://github.com/DimosTheocharis/SpaceInvaders",
+          message: "Code"
+        }
+      ],
       class: "carousel-item"
     },
   ]
