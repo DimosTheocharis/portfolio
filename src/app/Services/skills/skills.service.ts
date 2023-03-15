@@ -22,7 +22,7 @@ export class SkillsService {
     {
       name: "Javascript",
       percentage: 80,
-      text: "Built 3 personal projects and took course about intermidiate concepts like asychronous programming, \
+      text: "Built 3 personal projects and took course about intermediate concepts like asychronous programming, \
              promises etc, from Codecademy.",
       id: "skill2"
     },

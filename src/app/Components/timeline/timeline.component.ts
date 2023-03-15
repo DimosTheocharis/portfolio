@@ -22,7 +22,7 @@ export class TimelineComponent {
     //here we want to add the animation classes when the upper part of the timeline element enters the viewport
     const timelineTop = this.timeline!.getBoundingClientRect().top;
 
-    if (timelineTop <= this.windowHeight && !this.enteredViewport) {
+    if (timelineTop <= this.windowHeight - 100 && !this.enteredViewport) {
       this.enteredViewport = true;
 
       this.wrapperChildren = this.timeline!.children; //get the children of the timeline so as to add the animation class: wrapperAnimation
