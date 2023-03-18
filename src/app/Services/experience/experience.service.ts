@@ -14,7 +14,7 @@ export class ExperienceService {
              angular, typescript, sql.",
       class: "wrapper leftWrapper",
       arrowClass: "rightArrow",
-      imagePath: "../../../assets/images/sga.png"
+      imagePath: "assets/images/sga.png"
     }
   ]
 

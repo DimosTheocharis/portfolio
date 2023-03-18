@@ -14,7 +14,7 @@ export class ProjectsService {
                     supports 2 path finding algorithm and 5 sorting algorithms. The algorithms run with the help\
                     of data structures like priority queue, avl etc. The project is made with React.js. My goal for\
                     this project was to implement the knowledge i learnt about Data Structures at university.",
-      imagePath: "../../../assets/images/AlgorithmVisualizer.png",
+      imagePath: "assets/images/AlgorithmVisualizer.png",
       technologies: ["React", "Javascript", "Html", "Css", "Data Structures", "Algorithms"],
       operations: [
         {
@@ -41,7 +41,7 @@ export class ProjectsService {
                     such as evolutions and text entries are loaded from json files that were made with python scripts.\
                     These scripts use the technique 'Web Scraping' with the library BeautifulSoup4, to get data from the\
                     official pokemon site, Pokemon.com.",
-      imagePath: "../../../assets/images/Pokedex.jpg",
+      imagePath: "assets/images/Pokedex.jpg",
       technologies: ["React", "Javascript", "Html", "Css", "Python", "Web Scraping", "Local Storage", "Algorithms"],
       operations: [
         {
@@ -67,7 +67,7 @@ export class ProjectsService {
                     upgrade weapons or buy ammo and potions. You can unlock this stuff when you are in a certain level.\
                     Level up by gaining xp killing enemies and bosses. Lucky for you, in most of the levels there are chest\
                     that provide you with ammo and potions.",
-      imagePath: "../../../assets/images/Explorer.png",       
+      imagePath: "assets/images/Explorer.png",       
       technologies: ["Python", "Json"],
       operations: [
         {
@@ -86,7 +86,7 @@ export class ProjectsService {
                     chess interface it provides you with many other features such us creating your own profile, play \
                     custom games (custom color of the chess board and duration), save a game, match history to keep track\
                     of the games that have been played and many more!",
-      imagePath: "../../../assets/images/ChessPlatform.png",
+      imagePath: "assets/images/ChessPlatform.png",
       technologies: ["Python", "Json"],
       operations: [
         {
@@ -105,7 +105,7 @@ export class ProjectsService {
                     tasks you wanna achieve daily/monthly or yearly and save them to unique days or frequently-used \
                     routines. Also, there is a filter that lets you seperate your taks to completed and uncompleted ones.\
                     Lastly, the statistics section provifes usefull information about your tasks.",
-      imagePath: "../../../assets/images/MyTaskList.png",
+      imagePath: "assets/images/MyTaskList.png",
       technologies: ["Html", "Css", "Javascript", "Local Storage"],
       operations: [
         {
@@ -128,7 +128,7 @@ export class ProjectsService {
       description: "A fully completed snake game with a lot of differences from the normal version, such as obstacles,\
                     levels, golden apples, coins, shop etc made with Javascript, Html,Css. Start the game with the custom\
                     skin and gather coins to buy more rare skins...",
-      imagePath: "../../../assets/images/Snake.io.png",
+      imagePath: "assets/images/Snake.io.png",
       technologies: ["Html", "Css", "Javascript", "Local Storage"],
       operations: [
         {
@@ -150,7 +150,7 @@ export class ProjectsService {
       developmentPeriod: "August 2020 - September 2020",
       description: "A drawing project made with pygame. Draw your own paintings on 2 different-sized grids, playing\
                     around with 4 unique drawing features, and save them to your files so as never to lose them...",
-      imagePath: "../../../assets/images/Drawnar.io.png",
+      imagePath: "assets/images/Drawnar.io.png",
       technologies: ["Python", "Json"],
       operations: [
         {
@@ -170,7 +170,7 @@ export class ProjectsService {
                     Hangman is a simple self-made hangman game, made with python and pygame. You have 5 chances to achieve\
                     your mission. Find the word by clicking the buttons on the screen and save the little human, or let\
                     him suffer...",
-      imagePath: "../../../assets/images/Hangman.jpg",
+      imagePath: "assets/images/Hangman.jpg",
       technologies: ["Python"],
       operations: [],
       class: "carousel-item"
@@ -187,7 +187,7 @@ export class ProjectsService {
                     wave. Be aware! Every few levels the enemy wave will be empowered by the presence of strong bosses.\
                     There will be 3 bosses, each one stronger than the previous one. All of them will have stronger bullets\
                     than yours, and a more life.",
-      imagePath: "../../../assets/images/SpaceInvaders.jpg",
+      imagePath: "assets/images/SpaceInvaders.jpg",
       technologies: ["Python"],
       operations: [
         {
