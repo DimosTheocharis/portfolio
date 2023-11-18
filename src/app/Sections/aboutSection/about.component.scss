@@ -1,4 +1,4 @@
-@use '../../../styles.scss' as v;
+@use "src/scss/variables" as v;
 
 .aboutText {
     font-style: italic;
@@ -12,7 +12,7 @@
     padding-top: 0px;
 }
 
-.container-fluid > .row {
+.container-fluid>.row {
     height: 100%;
 }
 
@@ -26,73 +26,27 @@
     padding: 0px 10px;
 }
 
-.identityRow {
-    height: 10%;
-}
-
-.identityWrapper {
-    display: inline-flex;
-    position: relative;
-}
-
-.identityWrapper .staticText {
-    font-size: 20px;
-    font-weight: bold;
-    color: v.$accentColor2;
-}
-
-.identityWrapper .dynamicTexts {
-    padding-left: 10px;
-    height: 30px;
-    line-height: 30px;
-    overflow: hidden;
-}
-
-.identityWrapper .dynamicTexts li {
-    list-style: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: v.$accentColor;
-    position: relative;
-    animation: slider 6s steps(2) infinite;
-
-    span {
-        position: relative;
-    }
-
-    span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 110%;
-        border-left: 2px solid v.$accentColor;
-        background-color: v.$primaryColor;
-        left: 0px;
-        animation: typing 3s steps(17) infinite;
-        z-index: 1;
-    }
-} 
-
 .infoRow {
     padding: 5px 0px 0px 20px;
 }
 
-.infoRow > .label, .infoRow > .value {
+.infoRow>.label,
+.infoRow>.value {
     padding: 5px 0px;
 }
 
-.infoRow > .label > p {
+.infoRow>.label>p {
     font-weight: bold;
     margin: 0px;
 }
 
-.infoRow > .value > p {
+.infoRow>.value>p {
     margin: 0px;
 }
 
 .informationRow {
     height: 75%;
-} 
+}
 
 .linkColumn {
     height: 100%;
