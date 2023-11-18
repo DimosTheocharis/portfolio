@@ -1,4 +1,4 @@
-@use "../styles.scss" as v;
+@use "src/scss/variables" as v;
 
 .homeArrow {
     color: v.$accentColor;

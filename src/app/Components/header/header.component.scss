@@ -1,4 +1,9 @@
-@use '../../../styles.scss' as v;
+@use "src/scss/variables" as v;
+
+.logo {
+    font-size: 26px;
+    font-weight: 500;
+}
 
 .navbar {
     background-color: v.$primaryColor;

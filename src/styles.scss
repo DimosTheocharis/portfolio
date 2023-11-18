@@ -1,17 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@use "src/scss/variables" as v;
 
 * {
     transition: all 0.3s;
 }
 
-$primaryColor: rgb(0,0,0);
-$secondaryColor: rgb(46, 54, 74);
-$accentColor: rgb(170, 41, 250);
-$accentColor2: rgb(236, 236, 236);
-$accentColor3: rgb(250, 170, 40);
-
 body {
-    background-color: $primaryColor;
+    background-color: v.$primaryColor;
 }
 
 @font-face {
@@ -31,17 +25,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $secondaryColor;
+    background-color: v.$secondaryColor;
 
     .fa {
-        color: $accentColor;
+        color: v.$accentColor;
     }
 }
 
 .link:hover {
-    background-color: $accentColor;
+    background-color: v.$accentColor;
 
     .fa {
-        color: $secondaryColor;
+        color: v.$secondaryColor;
     }
+}
+
+.rowSpacer {
+    margin-top: 20px;
 }

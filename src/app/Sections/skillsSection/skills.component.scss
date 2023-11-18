@@ -1,4 +1,4 @@
-@use "../../../styles.scss" as v;
+@use "src/scss/variables" as v;
 
 .explanatoryText {
     width: 80%;
@@ -7,7 +7,7 @@
 
     p {
         color: v.$accentColor2;
-        font-style: italic; 
+        font-style: italic;
     }
 }
 
@@ -19,4 +19,3 @@
     row-gap: 30px;
     margin: auto;
 }
-
