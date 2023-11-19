@@ -21,11 +21,6 @@
     padding: 10px;
 }
 
-.contentRow {
-    height: 80%;
-    padding: 0px 10px;
-}
-
 .infoRow {
     padding: 5px 0px 0px 20px;
 }
@@ -38,14 +33,30 @@
 .infoRow>.label>p {
     font-weight: bold;
     margin: 0px;
+    color: v.$accentColor2;
 }
 
 .infoRow>.value>p {
     margin: 0px;
 }
 
-.informationRow {
-    height: 75%;
+.interestRow {
+    color: v.$accentColor2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    i {
+        color: v.$accentColor3;
+        font-size: 24px;
+    }
+}
+
+.interestsList {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: v.$padder;
 }
 
 .linkColumn {
@@ -56,63 +67,85 @@
 }
 
 .linksInnerRow {
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: row;
+    column-gap: calc(v.$padder * 2);
 }
 
 .linksRow {
     height: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 0px;
 }
 
 p {
     color: v.$accentColor2;
 }
 
-.photoInner {
-    width: 240px;
-    height: 240px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    .photoImg {
-        width: 80%;
-        height: 80%;
-    }
-}
-
 .photoSection {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    .photoImg {
+        width: 80%;
+        border-radius: 15px;
+    }
 }
 
-.photoInner::after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 35%;
-    height: 35%;
-    border-top: 10px solid v.$accentColor;
-    border-left: 10px solid v.$accentColor
+.tabsContentRow p {
+    font-size: 18px;
 }
 
-.photoInner::before {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 35%;
-    height: 35%;
-    border-right: 10px solid v.$accentColor;
-    border-bottom: 10px solid v.$accentColor;
+.tabsRow {
+    .tabList {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: calc(v.$padder * 2);
+    }
+
+    .tabList li {
+        position: relative;
+        cursor: pointer;
+        padding-bottom: v.$padder;
+
+        p {
+            color: v.$accentColor;
+            font-size: 22px;
+            margin: 0px;
+        }
+    }
+
+    .tabList li:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 0%;
+        background: v.$accentColor;
+        transition: all 1s ease-out;
+    }
+
+    .tabList li:hover:after {
+        width: 100%;
+    }
+
+    .tabList li.selected:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background: v.$accentColor;
+    }
 }
 
 .titleRow {
@@ -125,19 +158,6 @@ p {
     font-family: roboto;
 }
 
-@keyframes slider {
-    100% {
-        top: -30px;
-    }
-}
-
-@keyframes typing {
-    100% {
-        left: 100%;
-        margin: 0px -35px 0px 35px;
-    }
-}
-
 
 @media screen and (max-width: 600px) {
     .linksInnerRow {
@@ -146,5 +166,11 @@ p {
 
     .linksRow {
         margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tabsRow {
+        margin-top: 20px;
     }
 }

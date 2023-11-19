@@ -25,6 +25,11 @@ export class LinkService {
       icon: "fa fa-github",
       href: "https://github.com/DimosTheocharis",
       message: "View my projects on Github"
+    },
+    {
+      icon: "fa fa-code",
+      href: "https://github.com/DimosTheocharis/portfolio",
+      message: "View the code of this website"
     }
   ]
 

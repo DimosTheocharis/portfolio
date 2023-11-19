@@ -19,6 +19,10 @@ export class BasicInfoService {
       value: "6955215169"
     },
     {
+      label: "LOCATION",
+      value: "Thessaloniki, Greece"
+    },
+    {
       label: "LANGUAGE",
       value: "Greek, English"
     }

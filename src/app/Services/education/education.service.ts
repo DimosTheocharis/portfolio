@@ -27,7 +27,8 @@ export class EducationService {
       title: "University",
       attendancePeriod: "2021 - till now",
       text: "I currently attend the Department of Informatics of Aristotle University of Thessaloniki. I am taking courses\
-             like Object Oriented Programming, Data Structures, Algorithms, Artificial Intelligence etc.",
+             like Object Oriented Programming, Data Structures, Algorithms, Artificial Intelligence, Databases, \
+             Operating System, Software Engineering etc.",
       class: "wrapper leftWrapper",
       arrowClass: "rightArrow"
     }

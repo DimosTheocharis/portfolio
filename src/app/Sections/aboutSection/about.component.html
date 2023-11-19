@@ -1,53 +1,73 @@
 <app-section-header title="Home" id="HomeSection"></app-section-header>
-<section class="container-fluid">
+<section class="container-fluid section">
     <div class="row">
-        <div class="col-md-4 photoSection">
-            <span class="photoInner">
-                <img src="assets/images/photoProfile2.jpg" href="My profile photo" class="photoImg">
-            </span>
+
+        <div class="col-lg-4 photoSection">
+            <img src="assets/images/photoProfile3.jpg" href="My profile photo" class="photoImg">
         </div>
+
         <div class="col-md-8 container">
-            <div class="row informationRow">
-                <div class="col-md-6 container aboutSection">
-                    <div class="row titleRow">
-                        <div class="col-md">
-                            <h3>ABOUT</h3>
-                        </div>
-                    </div>
-                    <div class="row contentRow">
-                        <div class="col-md contentColumn">
-                            <p class="aboutText">
-                                "I've recently started my journey as a software engineer and have been experimented
-                                with projects involving web technologies and built games using python. I consider
-                                myself as a person who loves to find solution to problems and learn new things."
-                            </p>
-                        </div>
-                    </div>
+            <div class="row tabsRow">
+                <ul class="tabList" id="tabList">
+                    <li class="selected" id="tab_About">
+                        <p (click)="openTab('About')">About</p>
+                    </li>
+                    <li id="tab_BasicInformation">
+                        <p (click)="openTab('BasicInformation')">Basic Information</p>
+                    </li>
+                    <li id="tab_Interests">
+                        <p (click)="openTab('Interests')">Interests</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="row tabsContentRow">
+                <div *ngIf="selectedTab === 'About'">
+                    <p>
+                        My name is Dimosthenis Theocharis. I am currently undergraduate of the Department of Informatics
+                        of Thessaloniki and i work as a Software Engineer using web technologies. In university i learn
+                        about important concepts of software engineering and in my job i try to apply these
+                        concepts and tactics and get my hand dirty with popular & modern languages,
+                        frameworks and tools.
+                    </p>
+                    <p> In the future, i would like to study topics such as Artificial Intelligence,
+                        maybe Data Science and use them to build cool projects. I also intend to gain general knowledge
+                        such as linux, agile, devops etc in order to complete the package of 'Software Engineer'.
+
+                        I believe in the motto
+                        <span class="italics">"Hard work pays off"</span>
+                    </p>
                 </div>
-                <div class="col-md-6">
-                    <div class="row titleRow">
-                        <div class="col-md">
-                            <h3>BASIC INFORMATION</h3>
-                        </div>
-                    </div>
-                    <div class="row contentRow">
-                        <div class="col-md contentColumn container">
-                            <div *ngFor="let info of basicInfo" class="row infoRow">
-                                <div class="col-md-6 label">
-                                    <p>{{info.label}}</p>
-                                </div>
-                                <div class="col-md-6 value">
-                                    <p>{{info.value}}</p>
-                                </div>
+
+                <div *ngIf="selectedTab === 'BasicInformation'">
+                    <div class="col-md contentColumn container">
+                        <div *ngFor="let info of basicInfo" class="row infoRow">
+                            <div class="col-md-6 label">
+                                <p>{{info.label}}</p>
+                            </div>
+                            <div class="col-md-6 value">
+                                <p>{{info.value}}</p>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div *ngIf="selectedTab === 'Interests'">
+                    <ul class="col-md interestsList container">
+                        <li *ngFor="let interest of interests" class="row interestRow">
+                            <div style="width: 40px">
+                                <i [class]="interest.icon"></i>
+                            </div>
+                            <div class="col-7">
+                                <span>{{interest.name}}</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <div class="row linksRow rowSpacer">
                 <div class="linksInnerRow">
-                    <div *ngFor="let link of links" class="col-3 linkColumn">
+                    <div *ngFor="let link of links" class="linkColumn">
                         <div class="link">
                             <a class="btn btn-default btn-round btn-lg btn-icon" [href]="link.href" target="_blank"
                                 rel="tooltip" [title]="link.message">
