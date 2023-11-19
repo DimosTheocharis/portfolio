@@ -10,6 +10,7 @@
     height: 100%;
     background-color: v.$secondaryColor;
     border-radius: 10px;
+    margin: 0px;
 }
 
 .firstRow {
@@ -22,7 +23,7 @@
 
     img {
         width: 100%;
-        height: 100%;
+        aspect-ratio: 1/1;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
     }
@@ -31,7 +32,7 @@
 .mainColumn {
 
     .descriptionRow {
-        height: 80%;
+        height: calc(100% - 80px);
 
         .description {
             color: v.$accentColor2;
@@ -45,7 +46,7 @@
     }
 
     .identityRow {
-        height: 20%;
+        height: 80px;
         position: relative;
 
         h2 {
@@ -82,7 +83,7 @@
         padding: 20px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         column-gap: 30px;
 
@@ -116,5 +117,21 @@
         flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-bottom: 100px;
+    }
+
+    .imageColumn {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
     }
 }

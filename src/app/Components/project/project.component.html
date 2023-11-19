@@ -15,22 +15,18 @@
         </div>
     </div>
     <div class="row secondRow">
-        <div class="col-md-7 technologiesColumn">
+        <div class="col-md-8 technologiesColumn">
             <h4 class="columnTitle">Technologies</h4>
             <div class="technologies">
                 <app-technology *ngFor="let technology of project.technologies" [name]="technology"></app-technology>
             </div>
         </div>
-        <div class="col-md-5 operationButtonsColumn">
+        <div class="col-md-4 operationButtonsColumn">
             <h4 class="columnTitle">Operation Buttons</h4>
             <div class="operationButtons">
                 <div *ngFor="let operation of project.operations" class="link">
-                    <a class="btn btn-default btn-round btn-lg btn-icon"
-                       [href]="operation.href"
-                       target="_blank"
-                       rel="tooltip"
-                       [title]="operation.message"
-                    >
+                    <a class="btn btn-default btn-round btn-lg btn-icon" [href]="operation.href" target="_blank"
+                        rel="tooltip" [title]="operation.message">
                         <i [class]="operation.icon"></i>
                     </a>
                 </div>

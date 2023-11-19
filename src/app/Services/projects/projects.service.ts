@@ -67,7 +67,7 @@ export class ProjectsService {
                     upgrade weapons or buy ammo and potions. You can unlock this stuff when you are in a certain level.\
                     Level up by gaining xp killing enemies and bosses. Lucky for you, in most of the levels there are chest\
                     that provide you with ammo and potions.",
-      imagePath: "assets/images/Explorer.png",       
+      imagePath: "assets/images/Explorer.png",
       technologies: ["Python", "Json"],
       operations: [
         {
@@ -179,14 +179,10 @@ export class ProjectsService {
       title: "Space Invaders",
       id: 1,
       developmentPeriod: "May 2020 - June 2020",
-      description: "My first pygame-made game,and also my favorite one. Move your spaceship, don't let enemies reach \
+      description: "My first pygame-made game, and also my favorite one. Move your spaceship, don't let enemies reach \
                     earth, and buy items and enhacements from store to become faster, and stronger... You have a spaceship\
-                    and your duty is to protect the earth from increasing alien attack by shooting at them. The game starts\
-                    with 100 hp for your spaceship and 5 lives for you. Every alien attack damage you for 10 hp, and every\
-                    time an alien reaches earth, you lose 1 life. Fortunately, you gain 10hp each time you vanish an alien\
-                    wave. Be aware! Every few levels the enemy wave will be empowered by the presence of strong bosses.\
-                    There will be 3 bosses, each one stronger than the previous one. All of them will have stronger bullets\
-                    than yours, and a more life.",
+                    and your duty is to protect the earth from increasing alien attack by shooting at them. Every wave will\
+                    be stronger than the previous one and in some waves a boss will be appeared. Will you surive ?\ ",
       imagePath: "assets/images/SpaceInvaders.jpg",
       technologies: ["Python"],
       operations: [
