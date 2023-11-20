@@ -7,6 +7,26 @@ import { ProjectModel } from '../../Models/project/projectModel';
 export class ProjectsService {
   private projectsData: ProjectModel[] = [
     {
+      title: "Task Manager",
+      id: 10,
+      developmentPeriod: "August 2023 - November 2023",
+      description: "Task Manager is a full stack project built with Angular in frontend and Nest.js in backend. The data are \
+                    stored in MySQL database. The main purpose that Task Manager serves, is to allow users to handle their tasks.\
+                    Supported features: a) Create and log in your account, b) Create, edit, delete a task and update it's status \
+                    c) Filter the tasks and show only the open, completed etc ones, d) Time bar at the top of the screen that \
+                    tells you how much time has left for your log-in session to end.",
+      imagePath: "assets/images/TaskManager.png",
+      technologies: ["Angular", "Nest.js", "MySQL", "Typescript", "Scss", "Bootstrap", "Typeorm", "Authentication", "JWT"],
+      operations: [
+        {
+          icon: "fa fa-code",
+          href: "https://github.com/DimosTheocharis/Task-Manager",
+          message: "Code"
+        }
+      ],
+      class: "carousel-item active"
+    },
+    {
       title: "Algorithm Visualizer",
       id: 9,
       developmentPeriod: "July 2022 - October 2022",
@@ -28,7 +48,7 @@ export class ProjectsService {
           message: "Code"
         }
       ],
-      class: "carousel-item active"
+      class: "carousel-item"
     },
     {
       title: "Pokedex",
