@@ -10,37 +10,31 @@ export class SkillComponent {
   @Input() skill!: SkillModel;
   @Input() duration!: number;
 
-  public value: number = 0;
-  private maxStroke: number = 312;
-  private stepDecrement!: number;
-  private timeStep!: number;
-  private step!: number;
-  private circle!: any;
+  public currentValue: number = 0; // the current value of the progress bar animation
+  private timeStep!: number; // the amount of milliseconds that should pass between 2 consecutive steps of the animation
+  private progressBar!: HTMLElement;
+
   private windowHeight: number = window.innerHeight;
   private enteredViewport: boolean = false;
 
   ngOnInit() {
-    this.circle = document.getElementById(this.skill.id)?.getElementsByTagName("circle")[0] as unknown as HTMLElement;
-    this.step = this.maxStroke;
+    this.progressBar = document.getElementById(this.skill.id)?.getElementsByTagName("app-progress-bar")[0] as unknown as HTMLElement;
     this.timeStep = Math.round(this.duration / this.skill.percentage);
-    this.stepDecrement = this.maxStroke / 100;
   }
 
   @HostListener("document:scroll", ["$event"])
   public onViewportScroll() {
-    //here we want to add the animation classes when the upper part of the timeline element enters the viewport
-    const circleTop = this.circle!.getBoundingClientRect().top;
+    //here we want to add the animation classes when the upper part of the progress-bar element enters the viewport
+    const progressBarTop = this.progressBar!.getBoundingClientRect().top + this.progressBar.clientHeight;
 
-    if (circleTop <= this.windowHeight && !this.enteredViewport) {
+    if (progressBarTop <= this.windowHeight && !this.enteredViewport) {
       this.enteredViewport = true;
 
-      setInterval(() => {
-        if (this.value < this.skill.percentage) {
-          this.value += 1;
-          this.step -= this.stepDecrement;
-          this.circle!.style.strokeDashoffset = this.step.toString();
+      const intervalID = setInterval(() => {
+        if (this.currentValue < this.skill.percentage) {
+          this.currentValue += 1;
         } else {
-          clearInterval(undefined)
+          clearInterval(intervalID)
         }
       }, this.timeStep)
     }

@@ -1,9 +1,11 @@
 <app-section-header title="Skills" id="SkillsSection"></app-section-header>
-<div class="explanatoryText">
-    <p >The following percentages represent the self-confidence i have with each technology based on the amount of 
-        work-load and experience i have from personal and university projects, and from job-related experience.
-    </p>
-</div>
-<div class="wrapper">
-    <app-skill *ngFor="let skill of skills" [skill]="skill" [duration]="2000" [id]="skill.id"></app-skill>
-</div>
+<section class="section">
+    <div class="explanatoryText">
+        <p>The following percentages represent the self-confidence i have with each technology based on the amount of
+            work-load and experience i have from personal and university projects, and from job-related experience.
+        </p>
+    </div>
+    <div class="wrapper">
+        <app-skill *ngFor="let skill of skills" [skill]="skill" [duration]="2500" [id]="skill.id"></app-skill>
+    </div>
+</section>

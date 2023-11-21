@@ -23,6 +23,10 @@ export class BasicInfoService {
       value: "Thessaloniki, Greece"
     },
     {
+      label: "UNIVERSITY",
+      value: "Department of Informatics, Aristotle University of Thessaloniki"
+    },
+    {
       label: "LANGUAGE",
       value: "Greek, English"
     }

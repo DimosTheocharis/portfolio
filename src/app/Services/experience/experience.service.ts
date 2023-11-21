@@ -9,9 +9,9 @@ export class ExperienceService {
     {
       title: "Software Engineer",
       workPeriod: "November 2022 - till now",
-      text: "In my role as a SoftWare Engineer in SGA i contribute in the development of informatic systems used by \
+      text: "In my role as a Software Engineer in SGA i contribute in the development of informatic systems used by \
              various greek chambers like the 'Professional Chamber of Thessaloniki'. The technlogies that i use are \
-             angular, typescript, sql.",
+             Angular, Nest.js, Typescript, SQL and more.",
       class: "wrapper leftWrapper",
       arrowClass: "rightArrow",
       imagePath: "assets/images/sga.png"
