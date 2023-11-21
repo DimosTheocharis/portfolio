@@ -15,6 +15,7 @@ import { TimelineComponent } from './Components/timeline/timeline.component';
 import { ProjectComponent } from './Components/project/project.component';
 import { SkillComponent } from './Components/skill/skill.component';
 import { TechnologyComponent } from './Components/technology/technology.component';
+import { ProgressBarComponent } from './Components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TechnologyComponent } from './Components/technology/technology.componen
     SkillsComponent,
     SkillComponent,
     TechnologyComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,

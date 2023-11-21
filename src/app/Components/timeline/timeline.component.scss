@@ -22,7 +22,6 @@
     }
 
     p {
-        font-size: 15px;
         color: v.$accentColor2;
     }
 
@@ -135,9 +134,6 @@
 
 @media screen and (max-width: 600px) {
     .content {
-        p {
-            font-size: 13px;
-        }
 
         small {
             margin-bottom: 10px;

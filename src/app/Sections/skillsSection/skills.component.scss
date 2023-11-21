@@ -7,15 +7,13 @@
 
     p {
         color: v.$accentColor2;
-        font-style: italic;
     }
 }
 
 .wrapper {
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 30px;
-    margin: auto;
 }

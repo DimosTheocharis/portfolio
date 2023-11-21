@@ -1,0 +1,51 @@
+@use "src/scss/variables" as v;
+
+$totalStages: 5;
+$totalWidth: 340px;
+$width: calc($totalWidth - 60px);
+$height: 30px;
+$stageWidth: calc($width / $totalStages);
+
+.progress-bar {
+    width: $width;
+    height: $height;
+    border-radius: 8px;
+    background-color: v.$secondaryColor;
+    border: 3px solid v.$primaryColor;
+    position: relative;
+}
+
+#progress {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: v.$accentColor;
+    z-index: 1;
+}
+
+@for $i from 1 through $totalStages - 1 {
+    .vertical-line:nth-child(#{$i}) {
+        position: absolute;
+        top: 0px;
+        left: calc($i * $stageWidth - 2px);
+        width: 4px;
+        height: 100%;
+        background-color: v.$primaryColor;
+        z-index: 2;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $totalWidth;
+    height: $height;
+
+    p {
+        color: v.$accentColor2;
+        margin: 0px;
+        padding-right: v.$padder;
+    }
+}
