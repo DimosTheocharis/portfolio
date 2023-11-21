@@ -66,14 +66,20 @@
             </div>
 
             <div class="row linksRow rowSpacer">
-                <div class="linksInnerRow">
-                    <div *ngFor="let link of links" class="linkColumn">
-                        <div class="link">
-                            <a class="btn btn-default btn-round btn-lg btn-icon" [href]="link.href" target="_blank"
-                                rel="tooltip" [title]="link.message">
-                                <i [class]="link.icon"></i>
-                            </a>
-                        </div>
+                <div class="linkColumn">
+                    <div class="link">
+                        <a class="btn btn-default btn-round btn-lg btn-icon" href="assets/files/resume.pdf"
+                            rel="tooltip" title="Download my resume" download="resume_Dimosthenis_Theocharis">
+                            <i class="fa fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+                <div *ngFor="let link of links" class="linkColumn">
+                    <div class="link">
+                        <a class="btn btn-default btn-round btn-lg btn-icon" [href]="link.href" target="_blank"
+                            rel="tooltip" [title]="link.message">
+                            <i [class]="link.icon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
