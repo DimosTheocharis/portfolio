@@ -7,6 +7,32 @@ import { ProjectModel } from '../../Models/project/projectModel';
 export class ProjectsService {
   private projectsData: ProjectModel[] = [
     {
+      title: "Tic-Tac-Toe-AI",
+      id: 11,
+      developmentPeriod: "February 2024 - April 2024",
+      description: "This project is the classic Tic-Tac-Toe game where your opponent is the computer itself. \
+                    The program uses an algorithm called MiniMax in order to find the best move against player's \
+                    possible best move. Specifically, this algorithm is a recursive one used in Artificial \
+                    Intelligence and especially Game Theory field. It uses an evaluation method in order to compute \
+                    the value of an instance of the game-board and therefore determine how much the player will benefit \
+                    from transitioning to this state.",
+      imagePath: "assets/images/Tic-Tac-Toe-AI.png",
+      technologies: ["Python", "Pygame", "MiniMax", "Algorithms", "AI", "Game Theory"],
+      operations: [
+        {
+          icon: "fa fa-code",
+          href: "https://github.com/DimosTheocharis/Tic-Tac-Toe-AI",
+          message: "Code"
+        },
+        {
+          icon: "fa fa-download",
+          href: "https://dimos-theocharis.itch.io/tic-tac-toe-ai",
+          message: "Download"
+        }
+      ],
+      class: "carousel-item active"
+    },
+    {
       title: "Task Manager",
       id: 10,
       developmentPeriod: "August 2023 - November 2023",
@@ -24,7 +50,7 @@ export class ProjectsService {
           message: "Code"
         }
       ],
-      class: "carousel-item active"
+      class: "carousel-item"
     },
     {
       title: "Algorithm Visualizer",
