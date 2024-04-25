@@ -25,3 +25,41 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## How to deploy
+
+#### Step 1
+
+Upload all changes to master
+
+#### Step 2
+
+Run 
+
+```
+  ng build --base-href "https://github.com/DimosTheocharis/portfolio"
+```
+
+#### Step 3
+
+Checkout to gh-pages
+
+#### Step 4
+
+Run
+
+```
+  cp -r dist/* .
+  git add .
+  git commit -m "Deploy Angular app to GitHub Pages"
+```
+
+#### Step 5
+
+Push changes
+
+```
+  git push origin gh-pages
+```
