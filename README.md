@@ -39,27 +39,5 @@ Upload all changes to master
 Run 
 
 ```
-  ng build --base-href "https://github.com/DimosTheocharis/portfolio"
-```
-
-#### Step 3
-
-Checkout to gh-pages
-
-#### Step 4
-
-Run
-
-```
-  cp -r dist/* .
-  git add .
-  git commit -m "Deploy Angular app to GitHub Pages"
-```
-
-#### Step 5
-
-Push changes
-
-```
-  git push origin gh-pages
+  ng build --output-path docs --base-href /portfolio/
 ```
