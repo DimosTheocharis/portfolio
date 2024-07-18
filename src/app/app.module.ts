@@ -18,6 +18,7 @@ import { TechnologyComponent } from './Components/technology/technology.componen
 import { ProgressBarComponent } from './Components/progress-bar/progress-bar.component';
 import { ArticleComponent } from './Components/article/article.component';
 import { CertificatesComponent } from './Sections/certificatesSection/certificates.component';
+import { CertificateComponent } from './Components/certificate/certificate.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CertificatesComponent } from './Sections/certificatesSection/certificat
     ArticleComponent,
     CertificatesComponent,
     CertificatesComponent,
+    CertificateComponent,
   ],
   imports: [
     BrowserModule,

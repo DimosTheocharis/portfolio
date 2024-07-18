@@ -27,8 +27,8 @@ export class MenuItemsService {
       href: "#ProjectsSection"
     },
     {
-      title: "Articles",
-      href: "#ArSection"
+      title: "Certificates",
+      href: "#CertificatesSection"
     }
   ]
 

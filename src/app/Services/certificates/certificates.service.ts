@@ -12,8 +12,9 @@ export class CertificateService {
             description: "I purchased this course because i wanted to be able to understand the code in the dockerfiles of the projects \
              i was involved at my job. I also found interesting the ability to easily deploy my projects and set up environments that \
              include all the necessary dependencies to run the application.",
-            courselink: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/learn/lecture/22166788",
-            certificateLink: "https://1drv.ms/b/c/d4f8a9f78e44bb3b/EeTIyqRpsW1Jnaz33aHL3EUBn6hsC7o20Ghgc3nI8GnUpw?e=7e9kJU",
+            courseLink: "https://www.udemy.com/course/docker-kubernetes-the-practical-guide/learn/lecture/22166788",
+            certificateLink: "assets/files/certificate_Docker_Kubernetes.pdf",
+            fileTitle: "Docker-Kubernetes Certificate",
             completionDate: new Date(2024, 6, 12),
             knowledges: [
                 "What is Docker and why we use it.",
@@ -33,4 +34,10 @@ export class CertificateService {
             ]
         }
     ]
+
+    constructor() {}
+
+    public getCertificates(): CertificateModel[] {
+        return this.certificatesData;
+    }
 }

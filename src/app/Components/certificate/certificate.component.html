@@ -1,0 +1,58 @@
+<div class="container certificate">
+    <div class="row identityRow">
+        <div class="row">
+            <h2>{{certificate.title}}</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 details">
+                <p>Completion Date: <small>{{formattedCompletionDate}}</small></p>
+                <p>Provider: <small>{{certificate.provider}}</small></p>
+            </div>
+    
+            <div class="col-md-6 operationButtons">
+                <div class="link">
+                    <a class="btn btn-default btn-round btn-lg btn-icon" [href]="certificate.courseLink" target="_blank"
+                    rel="tooltip" title="Check course">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </div>
+        
+                <div class="link">
+                    <a class="btn btn-default btn-round btn-lg btn-icon" [href]="certificate.certificateLink"
+                        rel="tooltip" title="Download certificate" [download]="certificate.fileTitle">
+                        <i class="fa fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row contentRow">
+        <div class="descriptionColumn col-md-6">
+            <p class="description">{{certificate.description}}</p>
+        </div>
+        <div class="knowledgesColumn col-md-6">
+            <div class="row prologueRow">
+                <div class="col-md-6 col-12">
+                    <h6>Here are some things i learned:</h6>
+                </div>
+                <div class="col-md-6 col-12 slideButtons">
+                    <button (click)="handleLeftSlideButton()" class="slideButton" [disabled]="leftSlideButtonIsDisabled">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <p class="slideDescriptor">Slide {{currentSlideIndex + 1}} / {{totalSlides}}</p>
+                    <button (click)="handleRightSlideButton()" class="slideButton" [disabled]="rightSlideButtonIsDisabled">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row knowledgesRow">
+                <p *ngFor="let knowledge of slides[currentSlideIndex]" class="knowledge">
+                    <span>*</span>
+                    {{knowledge}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

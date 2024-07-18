@@ -1,0 +1,146 @@
+@use "src/scss/variables" as v;
+
+.certificate {
+    width: 80%;
+    background-color: v.$secondaryColor;
+    border-radius: 10px;
+}
+
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70%;
+
+    .descriptionColumn {
+        .description {
+            color: v.$accentColor2;
+            word-spacing: 0.175rem;
+            line-height: 1.5rem;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    .knowledgesColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+
+        .knowledgesRow {
+            overflow: hidden;
+            padding-top: v.$padder;
+            padding-left: v.$padder;
+
+            .knowledge {
+                color: v.$accentColor2;
+                font-size: 18px;
+                font-family: 'Courier New', Courier, monospace;
+                margin: v.$padder / 2;
+
+                span {
+                    color: v.$accentColor3;
+                    margin-right: v.$padder;
+                }
+            }
+        }
+
+        .prologueRow {
+            height: 10%;
+
+            h6 {
+                color: v.$primaryColor;
+                font-weight: bold;
+            }
+
+            .slideButtons {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                column-gap: v.$padder;
+
+                .slideButton {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 8px;
+                    background-color: v.$accentColor;
+
+                    .fa {
+                        color: v.$primaryColor;
+                    }
+                }
+
+                .slideButton:disabled {
+                    background-color: v.$secondaryColor;
+                }
+
+                .slideButton:hover:not(:disabled) {
+                    .fa {
+                        color: v.$secondaryColor;
+                    }
+                }
+
+                .slideDescriptor {
+                    color: v.$primaryColor;
+                }
+            }
+        }
+    }
+}
+
+.identityRow {
+    height: 30%;
+
+    h2 {
+        text-align: center;
+        font-style: roboto;
+        font-weight: bold;
+        color: v.$primaryColor;
+        padding-top: 10px;
+    }
+
+    .link {
+        background-color: v.$accentColor;
+
+        .fa {
+            color: v.$primaryColor;
+        }
+    }
+
+    .link:hover {
+
+        .fa {
+            color: v.$secondaryColor;
+        }
+    }
+
+    .operationButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: v.$padder;
+    }
+
+    p {
+        color: v.$primaryColor;
+        font-weight: bold;
+    }
+
+    small {
+        color: v.$accentColor3;
+        padding-left: v.$padder;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .prologueRow .slideButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start !important;
+    }
+}
