@@ -1,0 +1,6 @@
+<app-section-header title="Certificates" id="CertificatesSection"></app-section-header>
+<section>
+    <div *ngFor="let certificate of certificates">
+        <app-certificate [certificate]="certificate"></app-certificate>
+    </div>
+</section>
