@@ -65,7 +65,7 @@ export class ProjectsService {
       operations: [
         {
           icon: "fa fa-eye",
-          href: "https://dimostheocharis.github.io/AlgorithmsVisualizer/",
+          href: "https://dimostheocharis.github.io/AlgorithmVisualizer-code/",
           message: "View"
         },
         {
